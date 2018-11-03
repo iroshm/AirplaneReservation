@@ -3,7 +3,7 @@ create database Airplane;
 use Airplane;
 
 CREATE TABLE customer (
-  user_id varchar(20),
+  user_id int(20) auto_increment,
   name varchar(20),
   email varchar(20),
   password varchar(20),
@@ -92,7 +92,7 @@ CREATE TABLE Seat (
 
 CREATE TABLE booking  (
   booking_id varchar(20),
-  user_id varchar(20),
+  user_id int(20),
   schedule_id varchar(20),
   class_id varchar(20),
   seat_id varchar(20),
