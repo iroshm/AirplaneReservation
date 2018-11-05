@@ -5,6 +5,12 @@ added new table customer_type with the relevant discount for customer_types
 
 added a price attribute to booking because price changes with the customer_type
 
+need to add a price function to calculate price for a booking
+
+rethink about seat table
+
+rethink about flight table......no need of it
+
 */
 
 create database Airplane;
@@ -48,6 +54,7 @@ CREATE TABLE location (
 CREATE TABLE airport (
   airport_code int(5) auto_increment,
   location_id int(5),
+  airport_name VARCHAR(50) not null,
   PRIMARY KEY (airport_code),
   FOREIGN KEY (location_id) references location(location_id)
 );
@@ -99,12 +106,12 @@ CREATE TABLE seat (
 
 CREATE TABLE booking  (
   booking_id int(5) auto_increment,
-  user_id int(5),
-  schedule_id int(5),
-  class_id int(5),
-  seat_id int(5),
-  booking_date varchar(20),
-  booked_date varchar(20),
+  user_id int(5) not null,
+  schedule_id int(5) not null,
+  class_id int(5) not null,
+  seat_id int(5) not null,
+  booking_date varchar(20) not null,
+  booked_date varchar(20) not null,
   price varchar(20),
   PRIMARY KEY (booking_id),
   FOREIGN KEY (schedule_id) references predefined_schedule(schedule_id),
