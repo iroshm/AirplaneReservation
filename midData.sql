@@ -28,10 +28,14 @@ INSERT INTO `flight` (`flight_id`, `route_id`) VALUES ('1', '1');
 
 INSERT INTO `predefined_schedule` (`schedule_id`, `craft_id`, `flight_id`, `day`, `departure_time`, `arrival_time`) VALUES ('1', '1', '1', 'Monday', '0800', '1200');
 
-INSERT INTO `classes` (`class_id`, `route_id`, `price`, `classes`) VALUES ('1', '1', '200', 'Buisness');
+INSERT INTO `class` (`class_id`, `route_id`, `price`, `class`) VALUES ('1', '1', '200', 'Buisness');
 
 INSERT INTO `seat` (`seat_id`, `craft_id`, `seat_no`) VALUES ('1', '1', '1');
 
 INSERT INTO `booking` (`booking_id`, `user_id`, `schedule_id`, `class_id`, `seat_id`, `booking_date`, `booked_date`) VALUES ('1', '1', '1', '1', '1', '5/6/2018', '1/6/2018');
 
 INSERT INTO `real_schedule` (`real_schedule_id`, `flight_id`, `schedule_id`, `starting_time`, `arrival_time`, `craft_id`) VALUES ('1', '1', '1', '0805', '1210', '1');
+
+INSERT INTO `customer_state` (`customer_state`, `discount`, `bookings_needed`) VALUES ('Frequent', 5, 0);
+
+INSERT INTO `customer_state` (`customer_state`, `discount`, `bookings_needed`) VALUES ('Gold', 9, 10);
